@@ -6,14 +6,14 @@ const getRandomInt = () => (
 
 
 // This function takes in a hex string and returns true if its a "dark" color and false if its not.
-const is_dark = (hexNum) => {
-  const rgb = hexNum
-    .replace("#", "")
-    .match(/.{1,2}/g)
-    .map((c) => parseInt(c, 16));
+// const is_dark = (hexNum) => {
+//   const rgb = hexNum
+//     .replace("#", "")
+//     .match(/.{1,2}/g)
+//     .map((c) => parseInt(c, 16));
   
-  console.log( rgb);
-  const average =  rgb.reduce((a, b) => a + b, 0) /  rgb.length;
+//   console.log( rgb);
+//   const average =  rgb.reduce((a, b) => a + b, 0) /  rgb.length;
 
-  return true ? average < 119 : false;
-};
+//   return true ? average < 119 : false;
+// };
