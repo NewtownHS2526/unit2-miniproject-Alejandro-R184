@@ -84,6 +84,8 @@ const continentchecker = () => {
 
 continentinput.addEventListener("change" , continentchecker);
 // continent guessing game ^
+
+const body = document.body;
 const backgroundbutton = document.querySelector("#submit")
 const colorpicker = document.querySelector("#color");
 let colorvalue = colorpicker.value;
@@ -99,4 +101,10 @@ const is_dark = (hexNum) => {
   return true ? average < 119 : false;
 };
 
-colorpicker.addEventListener("change" , is_dark(colorvalue));
+const changebackground = () =>{
+    if (is_dark(colorvalue) == false){
+        body.style.backgroundColor = colorvalue;
+    }
+}
+
+backgroundbutton.addEventListener("click" , changebackground);
